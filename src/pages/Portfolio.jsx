@@ -2,7 +2,7 @@ import React from "react";
 import Profile from "../components/profile/Profile";
 import AboutMe from "../components/aboutMe/AboutMe";
 import SkillsTools from "../components/skillsTools/SkillsTools";
-import Education from "../components/Education/Education";
+import Education from "../components/education/Education";
 import Contact from "../components/contact/Contact";
 
 export default function Portfolio() {
