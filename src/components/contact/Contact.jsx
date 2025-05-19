@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="flex justify-center space-x-2 my-6">
         {redesSociales.map((redSocial, index) => (
           <a key={index} className="bg-lightPurple rounded-full flex justify-center items-center hover:-translate-y-2 hover:duration-300 shadow-xl/30" href={redSocial.link} target="_blank">
-            <img className="w-8 h-8 m-2" src={redSocial.icono} alt="" />
+            <img className="w-8 h-8 m-2" src={redSocial.icono} alt={redSocial.icono} />
           </a>
         ))}
       </div>

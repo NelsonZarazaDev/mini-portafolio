@@ -7,28 +7,28 @@ export default function SkillsTools() {
         <div className="font-bold text-xl mb-2">Habilidades y herramientas</div>
 
         <div className="font-bold text-md mb-2">Habilidades blandas</div>
-        <ul class="list-disc ml-7 mb-3 list-image-[url(./assets/cuadrado.svg)] list-inside space-y-2 ">
+        <ul className="list-disc ml-7 mb-3 list-image-[url(./assets/cuadrado.svg)] list-inside space-y-2 ">
           {habilidadesBlandas.map((habilidades, index) => (
             <li key={index}>{habilidades}</li>
           ))}
         </ul>
 
         <div className="font-bold text-md mb-2">Lenguajes</div>
-        <ul class="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
+        <ul className="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
           {lenguajes.map((lenguaje, index) => (
             <li className="font-semibold hover:bg-mediumPurple border hover:border-lightPurple hover:text-darkPurple transform transition-transform duration-200 hover:scale-110" key={index}>{lenguaje}</li>
           ))}
         </ul>
 
         <div className="font-bold text-md my-2">Frameworks y librerías</div>
-        <ul class="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
+        <ul className="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
           {frameworksLibrerias.map((frameworkLibreria, index) => (
             <li className="font-semibold hover:bg-mediumPurple border hover:border-lightPurple hover:text-darkPurple transform transition-transform duration-200 hover:scale-110" key={index}>{frameworkLibreria}</li>
           ))}
         </ul>
 
         <div className="font-bold text-md my-2">Bases de datos</div>
-        <ul class="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
+        <ul className="flex flex-wrap *:rounded-full *:border *:border-sky-100 *:px-2 *:py-0.5 *:m-1">
           {baseDatos.map((baseDato, index) => (
             <li className="font-semibold hover:bg-mediumPurple border hover:border-lightPurple hover:text-darkPurple transform transition-transform duration-200 hover:scale-110" key={index}>{baseDato}</li>
           ))}
