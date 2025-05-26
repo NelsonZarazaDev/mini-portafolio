@@ -1,3 +1,8 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Importa tus íconos
 import github from "../../assets/github_light.svg";
 import gmail from "../../assets/gmail.svg";
 import instagram from "../../assets/instagram.svg";
@@ -5,20 +10,6 @@ import linkedin from "../../assets/linkedin.svg";
 import tiktok from "../../assets/tiktok.svg";
 import youtube from "../../assets/youtube.svg";
 import whatsapp from "../../assets/whatsapp.svg";
-
-export default function Contact() {
-  return (
-    <>
-      <div className="flex flex-wrap justify-center space-x-2 my-6">
-        {redesSociales.map((redSocial, index) => (
-          <a key={index} className="bg-lightPurple rounded-full flex justify-center items-center hover:-translate-y-2 hover:duration-300 shadow-xl/30" href={redSocial.link} target="_blank">
-            <img className="w-8 h-8 m-2" src={redSocial.icono} alt={redSocial.icono} />
-          </a>
-        ))}
-      </div>
-    </>
-  );
-}
 
 const redesSociales = [
   { icono: github, link: "https://github.com/NelsonZarazaDev" },
@@ -29,3 +20,43 @@ const redesSociales = [
   { icono: tiktok, link: "https://www.tiktok.com/@nelson_mauricio_z" },
   { icono: youtube, link: "https://www.youtube.com/@Ctrl_Code" },
 ];
+
+export default function Contact() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.1,
+          },
+        },
+        hidden: {},
+      }}
+      className="flex flex-wrap justify-center space-x-2 my-6"
+    >
+      {redesSociales.map((redSocial, index) => (
+        <motion.a
+          key={index}
+          href={redSocial.link}
+          target="_blank"
+          className="bg-lightPurple rounded-full flex justify-center items-center hover:-translate-y-2 hover:duration-300 shadow-xl/30"
+          variants={{
+            hidden: { opacity: 0, scale: 0.8, y: 20 },
+            visible: { opacity: 1, scale: 1, y: 0 },
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <img className="w-8 h-8 m-2" src={redSocial.icono} alt="icono red social" />
+        </motion.a>
+      ))}
+    </motion.div>
+  );
+}
