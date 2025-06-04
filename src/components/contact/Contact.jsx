@@ -5,10 +5,7 @@ import { useInView } from "react-intersection-observer";
 // Importa tus íconos
 import github from "../../assets/github_light.svg";
 import gmail from "../../assets/gmail.svg";
-import instagram from "../../assets/instagram.svg";
 import linkedin from "../../assets/linkedin.svg";
-import tiktok from "../../assets/tiktok.svg";
-import youtube from "../../assets/youtube.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 
 const redesSociales = [
@@ -16,9 +13,6 @@ const redesSociales = [
   { icono: linkedin, link: "https://www.linkedin.com/in/nelson-mauricio-navarro-zaraza-3448542a5/" },
   { icono: gmail, link: "mailto:nelsonmauricionavarrozaraza@gmail.com" },
   { icono: whatsapp, link: "https://wa.me/573157465208" },
-  { icono: instagram, link: "https://www.instagram.com/nelson_mauricio_z/" },
-  { icono: tiktok, link: "https://www.tiktok.com/@nelson_mauricio_z" },
-  { icono: youtube, link: "https://www.youtube.com/@Ctrl_Code" },
 ];
 
 export default function Contact() {

@@ -22,6 +22,7 @@ const cursosAdicionales = [
   "GIT+GitHub: Todo un sistema de control de versiones de cero (Udemy)",
   "React intensivo: desde cero a avanzado (Udemy)",
   "Master en Python: Aprender Python 3, Django, Flask y Tkinter (Udemy)",
+  "Aprende a programar desde cero con C#, Microsoft .NET y WPF (Udemy)",
 ];
 
 export default function Education() {
