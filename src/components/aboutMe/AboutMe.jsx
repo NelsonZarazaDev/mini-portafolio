@@ -20,7 +20,7 @@ export default function AboutMe() {
       <span>
         👋🏾 ¡Hola! Soy estudiante de Ingeniería de Sistemas y desarrollador Full
         Stack con enfoque en el desarrollo de soluciones tecnológicas prácticas,
-        escalables y orientadas a objetivos concretos. Además, soy entusiasta
+        escalables y orientadas a objetivos. Además, soy entusiasta
         del análisis de ciberseguridad.
       </span>
     </motion.div>
